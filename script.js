@@ -1,45 +1,30 @@
-const daysEl = document.getElementById('days');
+const daysEl  = document.getElementById('days');
 const hoursEl = document.getElementById('hours');
-const minsEl = document.getElementById('mins');
-const secsEl = document.getElementById('secs');
+const minsEl  = document.getElementById('mins');
+const secsEl  = document.getElementById('secs');
 
 
-
-
-let upcEve = "1 Jan 2026";
+let upcomingEvent = '1 Jan 2026';
 
 
 function timeLeft() {
-  var dateTod = new Date();
-  var dateUpc = new Date(upcEve);
+  var dateToday    = new Date();
+  var dateUpcoming = new Date(upcomingEvent);
    
-  var seconds = Math.floor((dateUpc - dateTod) / 1000);
-  var days = Math.floor((seconds/3600)/24);
-  var hours = Math.floor(seconds/3600) % 24;
-  var mins = Math.floor(seconds / 60) % 60;
-  var secs = Math.floor(seconds) % 60 ;
-    
-  console.log(dateTod);
-  console.log(dateUpc - dateTod);
-  console.log(days);
-  console.log(hours);
-  console.log(mins);
-  console.log(secs);
+  var seconds= Math.floor((dateUpcoming - dateToday) / 1000);
+  var days   = Math.floor(seconds / 3600 / 24);
+  var hours  = Math.floor(seconds / 3600) % 24;
+  var mins   = Math.floor(seconds / 60) % 60;
+  var secs   = Math.floor(seconds) % 60 ;
+
+  daysEl.innerHTML  = days;
+  hoursEl.innerHTML = formatTime(hours);
+  minsEl.innerHTML  = formatTime(mins);
+  secsEl.innerHTML  = formatTime(secs);
 
 
-  daysEl.innerHTML = days;
-  hoursEl.innerHTML = formTime(hours);
-  minsEl.innerHTML = formTime(mins);
-  secsEl.innerHTML = formTime(secs);
-
-
-  function formTime(time){
-    if(time<10){
-        return (`0${time}`);
-    }
-    else{
-        return time;
-    }
+  function formatTime(time){
+   return (time<10) ? `0${time}` : time;
   }
 }; 
 
