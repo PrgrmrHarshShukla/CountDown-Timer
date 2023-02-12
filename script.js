@@ -6,7 +6,7 @@ const secsEl = document.getElementById('secs');
 
 
 
-let upcEve = "1 Jan 2024";
+let upcEve = "1 Jan 2026";
 
 
 function timeLeft() {
