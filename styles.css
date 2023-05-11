@@ -7,6 +7,7 @@ body {
     flex-direction: column;
     justify-content: start;
     align-items: center;
+    overflow: hidden;
   }
 
   .content{
@@ -20,7 +21,7 @@ body {
   .bigText{
       text-align: center;
       font-weight: 1000;
-      font-size: 5rem;
+      font-size: 7vw;
       margin-top: 30px;
       margin-bottom: 10px;
       color: rgb(48, 18, 129);
@@ -35,18 +36,17 @@ body {
     justify-content: center;
     text-align: center;
     font-weight: 800;
-    font-size: 30px;
     color: darkred;
   }
 
   p{
     color: red;
-    font-size: 40px;
+    font-size: 5vw;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 
   span{
-    font-size: 30px;
+    font-size: 4vw;
     color: rgb(9, 9, 177);
   }
   
