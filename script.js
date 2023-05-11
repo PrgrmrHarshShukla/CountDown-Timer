@@ -1,10 +1,15 @@
+let userEvent = prompt("Enter event Date to CountDown to {in the format DD MMM YYYY (eg, 1 Jan 2025)}");
+var userEventName = prompt("Enter your event's name");
+
+
+const eventNameEl  = document.getElementById('bigText');
 const daysEl  = document.getElementById('days');
 const hoursEl = document.getElementById('hours');
 const minsEl  = document.getElementById('mins');
 const secsEl  = document.getElementById('secs');
 
 
-let upcomingEvent = '1 Jan 2026';
+var upcomingEvent = userEvent;
 
 
 function timeLeft() {
@@ -16,17 +21,19 @@ function timeLeft() {
   var hours  = Math.floor(seconds / 3600) % 24;
   var mins   = Math.floor(seconds / 60) % 60;
   var secs   = Math.floor(seconds) % 60 ;
+  var eventName = `Your event '${userEventName}' is in`
 
+  eventNameEl.innerHTML  = eventName;
   daysEl.innerHTML  = days;
   hoursEl.innerHTML = formatTime(hours);
   minsEl.innerHTML  = formatTime(mins);
   secsEl.innerHTML  = formatTime(secs);
-
-
-  function formatTime(time){
-   return (time<10) ? `0${time}` : time;
-  }
 }; 
+
+
+function formatTime(time){
+ return (time<10) ? `0${time}` : time;
+};
 
 
 timeLeft();

@@ -1,17 +1,29 @@
 body {
     background: url(https://images.unsplash.com/photo-1579033461380-adb47c3eb938?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bW91bnRhaW4lMjBzdGFyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1400&q=60) no-repeat center fixed;
-    margin:0px;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .content{
+    background-color: rgba(191, 191, 172, 0.3);
+    border-radius: 20px;
+    max-width: 80vw;
+    height: auto;
+    padding: 10px;
   }
   
   .bigText{
       text-align: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 50px;
-      margin: auto;
-      margin-top: 50px;
-      margin-bottom: 30px;
-      color: rgb(53, 18, 129);
+      font-weight: 1000;
+      font-size: 5rem;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      color: rgb(48, 18, 129);
    }
   
   .timer{
@@ -35,7 +47,7 @@ body {
 
   span{
     font-size: 30px;
-    color: black;
+    color: rgb(9, 9, 177);
   }
   
   
