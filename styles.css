@@ -13,15 +13,17 @@ body {
   .content{
     background-color: rgba(191, 191, 172, 0.3);
     border-radius: 20px;
-    max-width: 80vw;
+    width: auto;
     height: auto;
+    padding-left: 30px;
+    padding-right: 30px;
     padding: 10px;
   }
   
   .bigText{
       text-align: center;
       font-weight: 1000;
-      font-size: 7vw;
+      font-size: calc(5vw);
       margin-top: 30px;
       margin-bottom: 10px;
       color: rgb(48, 18, 129);
@@ -41,12 +43,12 @@ body {
 
   p{
     color: red;
-    font-size: 5vw;
+    font-size: calc(3vw);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 
   span{
-    font-size: 4vw;
+    font-size: calc(2vw);
     color: rgb(9, 9, 177);
   }
   
